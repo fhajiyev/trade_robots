@@ -1,1 +1,1 @@
-# trade_robots
+This repo contains trade robots for sending transactions to Moscow stock exchange through SmartCom broker API provided by D8 Capital (previously known as IT-Invest)  
