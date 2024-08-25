@@ -8,8 +8,8 @@
     <ProjectGuid>{AE45F489-2073-4A3D-8637-3EA228D78B0D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Trader2</RootNamespace>
-    <AssemblyName>Trader2</AssemblyName>
+    <RootNamespace>TradeConnect</RootNamespace>
+    <AssemblyName>Trader1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

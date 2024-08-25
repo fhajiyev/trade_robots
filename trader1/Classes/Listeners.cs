@@ -11,7 +11,20 @@ using System.Data.Odbc;
 namespace TradeConnect
 {
     class Listeners {
-    
+
+            double o0_value = 0;
+            double o1_value = 0;
+            double c1_value = 0;
+
+            int currBar = 1;
+            int buyDone = 0;
+            int sellDone = 0;
+            int indicate = 0;
+
+            int userMachineFaster = 0;
+            int minDifference = 0;
+            int secDifference = 0;
+
             public void smartServer_AddSymbol(
                     int row, 
                     int nrows, 
@@ -477,6 +490,30 @@ namespace TradeConnect
                 InfoLastVolume = (int)Volume;
                 InfoLastAction = Action;
                 new Thread(ThreadUpdate).Start();
-            }        
+            }
+
+            public Listeners(
+                    Quote LastQuote,
+                    StServerClass SmartServer,
+                    List<Tiker> InfoTikers,
+                    List<string> InfoTypes,
+                    List<Bar> InfoBars,
+                    List<string> InfoPortfolios,
+                    StreamWriter tw,
+                    StreamWriter twclose,
+                    StreamWriter twopen,
+                    Stopwatch sw1
+            ) {
+                this.LastQuote = LastQuote;
+                this.SmartServer = SmartServer;
+                this.InfoTikers = InfoTikers;
+                this.InfoTypes = InfoTypes;
+                this.InfoBars = InfoBars;
+                this.InfoPortfolios = InfoPortfolios;
+                this.tw = tw;
+                this.twclose = twclose;
+                this.twopen = twopen;
+                this.sw1 = sw1;
+            }
     }
 }
